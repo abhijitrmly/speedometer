@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/speedometer/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/speedometer/static/js/main.f8a79810.chunk.js",
+    "main.js.map": "/speedometer/static/js/main.f8a79810.chunk.js.map",
+    "runtime-main.js": "/speedometer/static/js/runtime-main.abb696df.js",
+    "runtime-main.js.map": "/speedometer/static/js/runtime-main.abb696df.js.map",
+    "static/js/2.02526347.chunk.js": "/speedometer/static/js/2.02526347.chunk.js",
+    "static/js/2.02526347.chunk.js.map": "/speedometer/static/js/2.02526347.chunk.js.map",
+    "static/js/3.bc268962.chunk.js": "/speedometer/static/js/3.bc268962.chunk.js",
+    "static/js/3.bc268962.chunk.js.map": "/speedometer/static/js/3.bc268962.chunk.js.map",
+    "index.html": "/speedometer/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/speedometer/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.02526347.chunk.js.LICENSE.txt": "/speedometer/static/js/2.02526347.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.abb696df.js",
+    "static/js/2.02526347.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.f8a79810.chunk.js"
+  ]
+}
