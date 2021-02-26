@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Speedometer.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was developed using React, Styled Components to create a speedometer that runs from 1 to 220 incrementing at a rate of 1 km/h per second.
 
 ## Available Scripts
 
