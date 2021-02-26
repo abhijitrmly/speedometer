@@ -14,11 +14,14 @@ import {
 
 document.body.style = 'background: black;';
 
+// create a Python-like range function to get n number of elements in array
 const range = (start, count) => Array.apply(0, Array(count))
   .map((element, index) => index + start);
 
 const App = () => {
   const [seconds, setSeconds] = useState(0);
+
+  // increment time interval every second
   useEffect(() => {
     const myInterval = setInterval(() => {
       if (seconds === 220) {
