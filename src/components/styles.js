@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 export const SpeedometerWrapper = styled.div`
-    margin-top: 200px;
-    width: 24em;
-    height: 24em;
-    top: 50%;
-    left: 50%;
+    width: 36em;
+    height: 36em;
+    top: 40%;
+    left: 40%;
     margin: -150px 0 0 -100px;
     background: black;
     overflow: hidden;
@@ -18,7 +17,7 @@ export const InternalCircle = styled.div`
    width: 75%;
    height: 75%;
    margin: auto auto;
-   margin-top: 50px;
+   margin-top: 75px;
    border-radius: 50%;
 `;
 
@@ -60,11 +59,15 @@ export const SpeedDisplayWrapper = styled.div`
 
 export const SpeedNumber = styled.h1`
   text-align: center;
-  padding-top: 100px;
   color: white;
+  font-size: xxx-large;
+  padding-top: 150px;
+  margin-bottom: 0px;
 `;
 
 export const SpeedUnits = styled.h6`
   color: rgba(212,175,55, 1);
   margin-left: 4px;
+  margin-top: 0px;
+  margin-bottom: 8px;
 `;

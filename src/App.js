@@ -21,11 +21,12 @@ const App = () => {
   const [seconds, setSeconds] = useState(0);
   useEffect(() => {
     const myInterval = setInterval(() => {
-      if (seconds >= 0) {
-        setSeconds(seconds + 1);
-      }
       if (seconds === 220) {
         clearInterval(myInterval);
+      }
+
+      if (seconds >= 0 && seconds < 220) {
+        setSeconds(seconds + 1);
       }
     }, 1000);
     return () => {
