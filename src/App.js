@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable import/extensions */
+import React, { useState, useEffect } from 'react';
 
-function App() {
+import {
+  SpeedometerWrapper,
+  InternalCircle,
+  CurrentSpeedTicks,
+  Ticks,
+  SpeedDisplayWrapper,
+  SpeedNumber,
+  SpeedUnits,
+} from './components/styles.js';
+
+document.body.style = 'background: black;';
+
+const range = (start, count) => Array.apply(0, Array(count))
+  .map((element, index) => index + start);
+
+const App = () => {
+  const [seconds, setSeconds] = useState(0);
+  useEffect(() => {
+    const myInterval = setInterval(() => {
+      if (seconds >= 0) {
+        setSeconds(seconds + 1);
+      }
+      if (seconds === 220) {
+        clearInterval(myInterval);
+      }
+    }, 1000);
+    return () => {
+      clearInterval(myInterval);
+    };
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <SpeedometerWrapper>
+        {range(0, 220).map(
+          (angle) => <CurrentSpeedTicks angle={`${(angle - 20)}deg`} isPastSpeed={angle <= seconds} />,
+        )}
+        <InternalCircle>
+          {range(-10, 110).map(
+            (angle) => <Ticks isMajorTick={angle % 10 === 0} angle={`${angle * 2}deg`} />,
+          )}
+          <SpeedDisplayWrapper>
+            <SpeedNumber>{seconds}</SpeedNumber>
+            <SpeedUnits>km/h</SpeedUnits>
+          </SpeedDisplayWrapper>
+        </InternalCircle>
+      </SpeedometerWrapper>
     </div>
   );
-}
+};
 
 export default App;
