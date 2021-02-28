@@ -1,0 +1,108 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.circle {
+  width: 12em;
+  height: 12em;
+  top: 50%;
+  left: 50%;
+  margin: -150px 0 0 -100px;
+  background: #51bbb5;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 0.5em solid #fff;
+  position: absolute;
+
+  .round {
+     height: 4em;
+     width: 8em;
+     border-radius: 5.5em 5.5em 0.5em 0.5em;
+     border: 0.5em solid #fff;
+     border: {
+       bottom: transparent;
+     }
+     margin: 2.5em 1.5em;
+  }
+
+  .needle {
+      position: absolute;
+      width: 3.7em;
+      height: 0.4em;
+      border-radius: 3px;
+      background: #fff;
+      box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+      transform-origin: 0 0;
+      top: 6.7em;
+      left: 6em;
+      transform-origin: left;
+      animation: pegIt 3s linear infinite;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 1em;
+      height: 1em;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+      top: -0.3em;
+      left: -0.3em;
+    }
+  }
+}
+
+@keyframes pegIt {
+
+  20% {
+    transform: rotate(-40deg);
+  }
+
+  40% {
+    transform: rotate(-100deg);
+  }
+
+  60% {
+    transform: rotate(-60deg);
+  }
+
+  100% {
+    transform: rotate(-180deg);
+  }
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
